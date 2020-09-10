@@ -16,6 +16,7 @@ df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point(colour = "red") +
+  facet_wrap(~WindDir9am) +
   labs(title = "Brisbane", x = "Temperature at 9am", y = "Humidity at 9am") + 
   theme_minimal()
 
